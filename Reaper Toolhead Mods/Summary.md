@@ -1,0 +1,8 @@
+## List of Mods
+ - [WWG2 Dual Sensor Front Body coupling plate mount](https://github.com/ksummers92/Trident-Mods/blob/main/Reaper%20Toolhead%20Mods/WWG2%20Dual%20Sensor%20with%20brace%20mount.stl) is a modification of the WWG2 front body by bythorsthunder found [here](https://github.com/bythorsthunder/Voron_Mods/tree/main/Wristwatch_G2_Dual_Filament_Sensor) with the addition of a mounting point for the "Extruder Coupling Plate" found in this folder.
+ - [Extruder Coupling Plate](https://github.com/ksummers92/Trident-Mods/blob/main/Reaper%20Toolhead%20Mods/Extruder%20Coupling%20Plate.step) is a modification to create a third mounting point for the WWG2 extruder to the hotend mount of the Reaper toolhead that uses the Xol mount pattern.
+	- Here is a picture of the coupling plate: ![image](https://github.com/ksummers92/Trident-Mods/tree/main/Reaper%20Toolhead%20Mods/IMG_2426.JPEG)
+ - [Cutter](https://github.com/ksummers92/Trident-Mods/tree/main/Reaper%20Toolhead%20Mods/Cutter) folder contains parts for a cutter mod that were derived from this [cutter](https://www.printables.com/model/1142687-filament-cutter-for-reaper-toolhead-and-orbiter-pa) by @mental808.
+	- The parts contained here are just CAD files of the top and bottom halves of the cutter housing. The cutter arm parts should be taken from the linked Printables as those are unchanged.
+	- The parts were modeled to better align with the profile of the WWG2 and Reaper hotend mount as well as shave off 4 mm in overall height.
+	- At some point I will add some more tips and tricks that I learned with the cutter installation on Reaper when I get time.
