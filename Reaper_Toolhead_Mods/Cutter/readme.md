@@ -13,3 +13,7 @@ That being said, please let me know if you find any issues!
 ## Other notes about assembly
 - Once you have the two halves and the cutter arm installed, I would press the two halves together (a vice would be handy here) and check the motion of the arm. If it is binding, then I would suggest sanding the top and bottom surfaces of the cutter arm that fall within the gap in the top and bottom housing. You want it to move freely so that it can spring back after the cut.
 	- ![image](Top-sanding-location.png) ![image](Bottom-sanding-location.png)
+
+## Gantry-mounted servo
+- The gantry-mounted servo file is a slight remix of this [one](https://www.thingiverse.com/thing:6584232) with a bolt hole spacing of 41.5mm to work with my gantry backers
+- The servo arm depressor is a mix of the arm from [here](https://www.thingiverse.com/thing:6584232) and the pushbar from [here](https://www.printables.com/model/1142687-filament-cutter-for-reaper-toolhead-and-orbiter-pa/files) so that I could save some bed space.
