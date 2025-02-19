@@ -9,6 +9,12 @@ That being said, please let me know if you find any issues!
 - The pin behind the opening for the blade was also eliminated as the iterations that I have tested were consistently failing there.
 	- The indexing points are not a ring around the pivot pin in the arm bottom part and another pin about where the original was.
 - I was not able to figure out a way to not use super glue to attach the two halves together, so that is still the recommended method of construction.
+## Cutter V2
+- I had the cutter arm break on me again, so I modified the arm to hopefully distribute the forces from the cutting action.
+- I primarily hope to achieve this by bracing the other side of the part surrounding the filament path. The arc shape is not ideal from a loading perspective, but it should take some of the stress off the other side of the cutter arm.
+- Picture below illustrates the tensile forces (red) and the compressive forces that will be experienced by the two parts of the cutter arm.
+	- ![image](Cutter-V2-forces.png)
+
 
 ## Other notes about assembly
 - Once you have the two halves and the cutter arm installed, I would press the two halves together (a vice would be handy here) and check the motion of the arm. If it is binding, then I would suggest sanding the top and bottom surfaces of the cutter arm that fall within the gap in the top and bottom housing. You want it to move freely so that it can spring back after the cut.
