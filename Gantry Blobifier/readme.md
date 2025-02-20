@@ -18,7 +18,7 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 <img src="Resources/Blobifier_Trident.png" width="400"><img src="Resources/Blobifier_Front.jpg" width="400"><img src="Resources/Blobifier_Back.jpg" width="400">
 
 # In Action
-<video src="https://youtu.be/DP9UL1YaNPk" width="600"></video>
+[![Watch the Video](https://img.youtube.com/vi/DP9UL1YaNPk/0.jpg)](https://youtu.be/DP9UL1YaNPk)
 
 # Bill of Materials:
 - 1x NEMA 17 stepper motor, I do not think that the size is important since the assembly is relatively light, so opt for the smallest variant you have on hand.
