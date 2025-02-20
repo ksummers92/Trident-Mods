@@ -20,6 +20,8 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 # In Action
 [![Watch the Video](https://img.youtube.com/vi/DP9UL1YaNPk/0.jpg)](https://youtu.be/DP9UL1YaNPk)
 
+> WARNING: Improper configuration of this setup and macro could result in damage to your printer. I am not responsible for any damages caused as a result of your actions. That being said, I am willing to assist if you are having any issues.
+
 # Bill of Materials:
 - 1x NEMA 17 stepper motor, I do not think that the size is important since the assembly is relatively light, so opt for the smallest variant you have on hand.
 - 1x TMC2209 or any bipolar stepper motoro driver
@@ -89,3 +91,5 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 - The originator of the [Blobifier_X](https://github.com/xuanyuanss/Blobifier_X) also includes a kick attachment for Stealthburner toolheads. However, if you are using Filametrix, then it will be incompatible as it mounts to one of the mounting points used by Filametrix.
 - Thank you to the Blobifier_X creator for laying the groundwork for this project.
 - Thank you to @Dendrowen for his original creation of the Blobifier.
+
+- If you run into any issues, please raise an issue here or contact me on discord (ksummers92)
