@@ -1,1 +1,2 @@
-Reaper Toolhead Mods directory contains mods/remixes used that relate to the [Reaper Toolhead](https://github.com/APDMachine/Reaper) ecosystem.
+- Reaper Toolhead Mods directory contains mods/remixes used that relate to the [Reaper Toolhead](https://github.com/APDMachine/Reaper) ecosystem.
+- Gantry Blobifier is a modified version of [Blobifier_X](https://github.com/xuanyuanss/Blobifier_X) which is a variant of [Blobifier](https://github.com/Dendrowen/Blobifier).
