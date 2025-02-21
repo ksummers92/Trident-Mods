@@ -83,6 +83,7 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 
 # Printing Suggestions
 - Standard Voron printing profile should be sufficient.
+- I printed these parts with ASA. They might work with PLA, but I cannot guarantee it.
 - The print orientation of the stls is not guaranteed. However, the orientation should like the image below. The slider has a built in support that can be removed easily by slotting a flat head in the gap and twisting.
 - ![image](Resources/Print_orientation.png)
 	- Note that the coupler (if you choose to use it) should be printed with the 5mm end down on the build plate.
