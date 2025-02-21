@@ -53,7 +53,7 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 	- Drill holes into bar as shown below
 - Masking tape, aids in adherence of blob to tray. Other methods could also work, this just worked for me.
 
-![image](Tray_hole_dimensions.png)
+![image](Resources/Tray_hole_dimensions.png)
 
 # Key Assembly Instructions
 - If using printed coupler, I suggest installing the stepper mount shaft and T8 rod into coupler and then pressing the heatset insert all the way until it stops against the shaft/rod.
@@ -84,7 +84,7 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 # Printing Suggestions
 - Standard Voron printing profile should be sufficient.
 - The print orientation of the stls is not guaranteed. However, the orientation should like the image below. The slider has a built in support that can be removed easily by slotting a flat head in the gap and twisting.
-- ![image](Print_orientation.png)
+- ![image](Resources/Print_orientation.png)
 	- Note that the coupler (if you choose to use it) should be printed with the 5mm end down on the build plate.
 
 # Other Considerations
