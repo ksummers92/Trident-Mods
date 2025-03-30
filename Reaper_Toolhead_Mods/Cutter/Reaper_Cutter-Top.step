@@ -5,12 +5,14 @@ HEADER;
  */
 
 FILE_DESCRIPTION(
-/* description */ (''),
+/* description */ ('',
+'CAx-IF Rec.Pracs.---Representation and Presentation of Product Manufa
+cturing Information (PMI)---4.0---2014-10-13'),
 /* implementation_level */ '2;1');
 
 FILE_NAME(
 /* name */ 'Reaper_Cutter-Top.step',
-/* time_stamp */ '2025-01-22T12:45:16-06:00',
+/* time_stamp */ '2025-03-30T08:47:20-05:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20',
@@ -18,7 +20,7 @@ FILE_NAME(
 
 /* authorisation */ '');
 
-FILE_SCHEMA (('AUTOMOTIVE_DESIGN { 1 0 10303 214 3 1 1 }'));
+FILE_SCHEMA (('AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF { 1 0 10303 442 1 1 4 }'));
 ENDSEC;
 
 DATA;
@@ -1941,9 +1943,8 @@ SOLID_ANGLE_UNIT()
 #1881=PRODUCT_DEFINITION_FORMATION('',$,#1886);
 #1882=PRODUCT_RELATED_PRODUCT_CATEGORY('Top','Top',(#1886));
 #1883=APPLICATION_PROTOCOL_DEFINITION('international standard',
-'automotive_design',2009,#1884);
-#1884=APPLICATION_CONTEXT(
-'Core Data for Automotive Mechanical Design Process');
+'ap242_managed_model_based_3d_engineering',2011,#1884);
+#1884=APPLICATION_CONTEXT('Managed model based 3d engineering');
 #1885=PRODUCT_CONTEXT('part definition',#1884,'mechanical');
 #1886=PRODUCT('Top','Top',$,(#1885));
 #1887=PRESENTATION_STYLE_ASSIGNMENT((#1888));
