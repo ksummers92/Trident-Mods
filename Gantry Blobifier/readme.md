@@ -46,7 +46,8 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 	- Length of these will depend on the length of the dowels that you choose and the length of spacer you have.
 	- Generally, the length of the screws should be less than half the length of the rods (recommend (length_of_rod/2)-10) and choose spacer appropriately.
 - 2x M3x25mm spacer for mating the support bolts together
-	- Strictly speaking, these and the 40mm bolts may not be necessary, but I added them as a backup in the event that the screws holding the rods in place backed out over time from vibrations. You can add loctite to these, I would not recommend adding loctite to the screws holding the rods. 
+	- <s>Strictly speaking, these and the 40mm bolts above may not be necessary, but I added them as a backup in the event that the screws holding the rods in place backed out over time from vibrations. You can add loctite to these, I would not recommend adding loctite to the screws holding the rods. </s>
+	- After extended use, when I took the blobifier apart, I found that my set screws had loosened. Therefore, I believe that these support rods are good insurance.
 - 1x 15x2x?mm aluminum bar for tray
 	- You want this long enough to extend about 4-5mm past nozzle when nozzle parked over tray.
 	- I suggest buying longer than needed and cutting to length once you have everything mocked up.
@@ -58,22 +59,27 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 # Key Assembly Instructions
 - If using printed coupler, I suggest installing the stepper mount shaft and T8 rod into coupler and then pressing the heatset insert all the way until it stops against the shaft/rod.
 - Assemble the main body and the stepper motor mount with the rods, then install the T8 shaft with the coupler onto the stepper motor before attaching stepper to the mount.
+- If using the printed standoff, there are two options for attaching with bolts: insert a M3 nut into the recess or use a M3x5x4 heatset insert. 
+	- There is no need to torque the support bolts significantly as they are just keeping the assembly together. Overtorquing may lead to printed part failure, so use the Voron adage "Tighten until the plastic bends and cracks. Back up 2 turns, discard parts, reprint and try again".
 
 # Setup Instructions
 ## Basic Configuration
 - Copy blobifier_trident.cfg and blobifier_trident_hw.cfg to config folder.
+	- Add [include blobifier_trident.cfg] and [include blobifier_trident_hw.cfg] to printer.cfg
 - Update the pin definitions, rotation distance, etc. in blobifier_trident_hw.cfg to match your setup.
-- Check the stepper motor direction by manually putting the slider in the middle of the travel, then run MANUAL_STEPPER STEPPER=blobifier MOVE=5. If the slider moves away from the microswitch (down), then the direction is correct. Otherwise, invert the DIR pin in the blobifier_trident_hw.cfg.
+- Check the stepper motor direction by manually putting the slider in the middle of the travel, then run `MANUAL_STEPPER STEPPER=blobifier MOVE=5`. If the slider moves away from the microswitch (down), then the direction is correct. Otherwise, invert the DIR pin in the blobifier_trident_hw.cfg.
+> NOTE:
+> MANUAL_STEPPER works differently than you might expect if you haven't used it before. Klipper keeps track of the position of a manual stepper (between restarts that is), so running the above `MANUAL_STEPPER STEPPER=blobifier MOVE=5` again will result in no movement until a firmware restart or one issues `MANUAL_STEPPER STEPPER=blobifier SET_POSITION=0` to reset the stored position. Keep this in mind when testing correct movement.
 ## Home Position Setting
 - Install the bumpstop screw into slider if you have not already
 - Manually adjust the slider position such that the tray sits approximately 0.2 - 0.6mm below the nozzle.
 	- Recommended to move the toolhead manually into position.
 - Adjust the bumpstop screw until you hear the microswitch click.
 - Move the toolhead clear of the tray
-- Run BLOBIFIER_RESET, then MANUAL_STEPPER STEPPER=blobifier MOVE=5 to move the slider away from the microswitch. Then run BLOBIFIER_HOME. The slider should move up and then stop when the microswitch is activated.
+- Run `BLOBIFIER_RESET`, then `MANUAL_STEPPER STEPPER=blobifier MOVE=5` to move the slider away from the microswitch. Then run `BLOBIFIER_HOME`. The slider should move up and then stop when the microswitch is activated.
 - Move the toolhead back over the tray (careful to make sure that it does not collide with the tray) and check the distance between the nozzle and the tray. If the distance is still ~0.2 - 0.6mm, then no more adjustment is needed. 
-	- If it is too close to the nozzle or the nozzle would collide with the tray, then run BLOBIFIER_RESET and MANUAL_STEPPER STEPPER=blobifier MOVE=5 again, thread the bumpstop screw in further, run BLOBIFIER_HOME again, then check the distance again.Repeat as necessary.
-	- If the tray is too far away, loosen the bumpstop screw enough that you think it will provide the necessary gap (M3 screws have a 0.5mm pitch, so one turn/rev = 0.5mm in linear distance). Run BLOBIFIER_RESET then MANUAL_STEPPER STEPPER=blobifier MOVE=5 and then BLOBIFIER_HOME again. Check the distance. Repeat as necessary._
+	- If it is too close to the nozzle or the nozzle would collide with the tray, then run `BLOBIFIER_RESET` and `MANUAL_STEPPER STEPPER=blobifier MOVE=5` again, thread the bumpstop screw in further, run `BLOBIFIER_HOME` again, then check the distance again.Repeat as necessary.
+	- If the tray is too far away, loosen the bumpstop screw enough that you think it will provide the necessary gap (M3 screws have a 0.5mm pitch, so one turn/rev = 0.5mm in linear distance). Run `BLOBIFIER_RESET` then `MANUAL_STEPPER STEPPER=blobifier MOVE=5` and then `BLOBIFIER_HOME` again. Check the distance. Repeat as necessary.
 - Once you are confident that the nozzle is at a good distance and will not collide with the tray, then home the XY axes and move the nozzle over the tray, making sure to center it as best as possible. Record the X and Y coordinates (the Y coordinate is usually the same as the axis maximum). These coordinates correspond to the purge_x and purge_y variables in the blobifier_trident.cfg.
 - Additionally, define the kick_ready_x, kick_x, and kick_y coordinates.
 	- The kick_ready_x position should be to the left or right of the purge_x position and provide enough distance to build up to the blob_kick_spd you set in the config.
@@ -81,12 +87,17 @@ While attempting to implement the Blobifier_X, I found that the unipolar stepper
 	- If you are kicking with the nozzle silicone sock, then kick_y will be the same as the purge_y value. If you are kicking with something else (I use the part of my beacon where it mounts to the carriage, more rigid and generally cheaper/easier to replace than a hotend if something bad were to happen...), then you will input a kick_y position that works for you.
 - Finally, go through the BLOBIFIER gcode variables and set the other variables as necessary. Many of them are the same as the OG [Blobifier](https://github.com/moggieuk/Happy-Hare/blob/main/config/addons/blobifier.cfg) variables found in the Happy Hare repo.
 
+## Advanced Configuration
+TBD
+
 # Printing Suggestions
 - Standard Voron printing profile should be sufficient.
 - I printed these parts with ASA. They might work with PLA, but I cannot guarantee it.
 - The print orientation of the stls is not guaranteed. However, the orientation should like the image below. The slider has a built in support that can be removed easily by slotting a flat head in the gap and twisting.
 - ![image](Resources/Print_orientation.png)
 	- Note that the coupler (if you choose to use it) should be printed with the 5mm end down on the build plate.
+- If you choose to use the printed standoff, it was designed to be printed laying down to prevent separation at layer lines in operation. Orient it as shown below for best performance.
+	- ![image](Resources/standoff_orientation.png)
 
 # Other Considerations
 - The originator of the [Blobifier_X](https://github.com/xuanyuanss/Blobifier_X) also includes a kick attachment for Stealthburner toolheads. However, if you are using Filametrix, then it will be incompatible as it mounts to one of the mounting points used by Filametrix.
